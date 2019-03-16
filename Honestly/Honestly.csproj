@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Don't assign null or false to booleans if you don't know what they are. Be honest!
+
+Icon made by Freepik (https://www.flaticon.com/authors/freepik) from www.flaticon.com</Description>
+    <Authors>mattiasnordqvist</Authors>
+    <PackageIconUrl>https://raw.githubusercontent.com/mattiasnordqvist/Honestly/master/icon.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/mattiasnordqvist/Honestly</PackageProjectUrl>
   </PropertyGroup>
 
 </Project>
