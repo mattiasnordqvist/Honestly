@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Honestly
+namespace Honest
 {
     public class Honestly
     {
