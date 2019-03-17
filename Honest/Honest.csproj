@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>Don't assign null or false to booleans if you don't know what they are. Be honest!
+    <Description>Don't assign incorrect default values to variables with unknown values. Be honest!
 
 Icon made by Freepik (https://www.flaticon.com/authors/freepik) from www.flaticon.com</Description>
     <Authors>mattiasnordqvist</Authors>
@@ -11,7 +11,7 @@ Icon made by Freepik (https://www.flaticon.com/authors/freepik) from www.flatico
     <PackageProjectUrl>https://github.com/mattiasnordqvist/Honestly</PackageProjectUrl>
     <RootNamespace>Honest</RootNamespace>
     <AssemblyName>Honest</AssemblyName>
-    <Version>2.0.0</Version>
+    <Version>3.0.0</Version>
     <PackageId>Honestly</PackageId>
   </PropertyGroup>
 
