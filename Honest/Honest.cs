@@ -5,17 +5,18 @@ namespace HonestNamespace
 {
     public class Honest<T>
     {
-        private bool _knows = false;
         private T _value = default(T);
 
         public static Honest<T> DontKnow() => new Honest<T>();
         public static Honest<T> Null() => null;
 
+        public bool IsKnown { get; private set; }
+
         public override bool Equals(object obj)
         {
             if (obj is Honest<T> honest)
             {
-                if (!_knows || !honest._knows)
+                if (!IsKnown || !honest.IsKnown)
                 {
                     return Honestly.DontKnow;
                 }
@@ -33,7 +34,7 @@ namespace HonestNamespace
 
         public override int GetHashCode()
         {
-            if (!_knows)
+            if (!IsKnown)
             {
                 throw new InvalidOperationException("Honestly?");
             }
@@ -44,20 +45,20 @@ namespace HonestNamespace
 
         internal Honest()
         {
-            _knows = false;
+            IsKnown = false;
             _value = default(T);
         }
         public Honest(T value)
         {
-            _knows = true;
+            IsKnown = true;
             _value = value;
         }
 
-        public static implicit operator T(Honest<T> honestly)
+        public static implicit operator T(Honest<T> honest)
         {
-            if (honestly._knows)
+            if (honest.IsKnown)
             {
-                return honestly._value;
+                return honest._value;
             }
             throw new InvalidOperationException("Honestly, don't know");
         }
